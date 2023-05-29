@@ -1,7 +1,7 @@
 on: push
-name: Clippy check
+name: Check Code
 jobs:
-  clippy_check:
+  check_code:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1

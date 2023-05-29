@@ -3,6 +3,8 @@ name = "prototyping"
 version = "0.1.0"
 edition = "2021"
 
+[dev-dependencies]
+rusty-hook = "^0.11.2"
 
 [dependencies]
 deno_core = "0.188.0"
