@@ -1,9 +1,9 @@
-use tree_sitter::{Parser, Language, Query, QueryCursor};
-
+use tree_sitter::{Language, Parser, Query, QueryCursor};
 
 pub fn test_tree_sitter() {
-
-    extern "C" { fn tree_sitter_python() -> Language; }
+    extern "C" {
+        fn tree_sitter_python() -> Language;
+    }
     let mut parser = Parser::new();
     let language = unsafe { tree_sitter_python() };
     parser.set_language(language).unwrap();
@@ -35,16 +35,18 @@ def func():
     let res = cursor.matches(&q, root_node, source_code.as_bytes());
 
     for m in res {
-
         for c in m.captures.iter() {
             let name = q.capture_names().get(usize::try_from(c.index).unwrap());
             let range = c.node.range();
             let related_code = &source_code[range.start_byte..range.end_byte];
             println!(
                 "[{}:{}-{}:{} {}] Offending source code: `{}`",
-                range.start_point.row, range.start_point.column,
-                range.end_point.row, range.end_point.column,
-                name.unwrap(), related_code,
+                range.start_point.row,
+                range.start_point.column,
+                range.end_point.row,
+                range.end_point.column,
+                name.unwrap(),
+                related_code,
             );
         }
     }
