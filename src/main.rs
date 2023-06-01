@@ -1,5 +1,6 @@
 mod exec_js;
 mod tree_sitter;
+mod model;
 
 use deno_core::JsRuntime;
 use deno_core::RuntimeOptions;
