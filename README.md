@@ -8,7 +8,6 @@ git clone https://github.com/tree-sitter/tree-sitter-javascript
 
 ### TODO
 
- - Reading values from a JSON file and deserialize into a class
  - Make multiple execution of a function into multiple threads
  - Getting rules from an API and serializing it
  - Reading data from the environment (env variables)
@@ -17,6 +16,7 @@ git clone https://github.com/tree-sitter/tree-sitter-javascript
 
 ### Done
 
+- Reading values from a JSON file and deserialize into a class
  - Separate the project between one or multiple common libraries and build multiple binaries
  - Parse tree-sitter code
  - Execute JavaScript with Deno
