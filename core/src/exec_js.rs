@@ -38,3 +38,26 @@ pub fn execute_rust_function() {
     rt.execute_script_static("panik", "Deno.core.ops.op_panik(42)")
         .unwrap();
 }
+
+#[allow(dead_code)]
+fn return_str() -> String {
+    let mut res = String::new();
+    res.push_str("hello_world");
+    res
+}
+
+
+#[allow(dead_code)]
+pub fn js_test() {
+    println!("{}", return_str());
+
+    let code = "function foo(a) { return a + 10;} foo(32);";
+
+    let mut runtime = JsRuntime::new(RuntimeOptions::default());
+    let output: serde_json::Value = eval(&mut runtime, code).expect("Eval failed");
+
+    println!("result: {}", output);
+
+    execute_rust_function();
+}
+
