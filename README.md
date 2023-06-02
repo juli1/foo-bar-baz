@@ -3,6 +3,30 @@ To use before:
 git clone https://github.com/tree-sitter/tree-sitter-python
 git clone https://github.com/tree-sitter/tree-sitter-javascript
 
+
+## Mini projects
+
+### TODO
+
+ - Reading values from a JSON file and deserialize into a class
+ - Make multiple execution of a function into multiple threads
+ - Getting rules from an API and serializing it
+ - Reading data from the environment (env variables)
+ - Proving the sandboxing mechanisms for rust
+ - Have a webserver to execute rules
+
+### Done
+
+ - Separate the project between one or multiple common libraries and build multiple binaries
+ - Parse tree-sitter code
+ - Execute JavaScript with Deno
+
+
+## Binaries
+
+ - `exec_js`: execute JavaScript using Deno
+ - `tree_sitter`: tree sitter query
+
 ## Build a binary
 
 Use
@@ -38,8 +62,8 @@ Then, we have each binary in `src/bin`. These binaries are what is built.
 
 ## Pre-commit/push hooks
 
-Using cargo-husky. Look at `Cargo.toml`. It has the following content that add a pre-push hook
-and run clippy and cargo fmt.
+Using [cargo-husky](https://lib.rs/crates/cargo-husky).
+Look at `Cargo.toml`. It has the following content that add a pre-push hook and run clippy and cargo fmt.
 
 ```
 [dev-dependencies.cargo-husky]
@@ -47,3 +71,6 @@ version = "1"
 default-features = false # Disable features which are enabled by default
 features = ["precommit-hook", "run-cargo-test", "run-cargo-clippy", "run-cargo-fmt"]
 ```
+
+
+
