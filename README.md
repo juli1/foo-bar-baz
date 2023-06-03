@@ -12,7 +12,6 @@ git clone https://github.com/tree-sitter/tree-sitter-javascript
  - Getting rules from an API and serializing it
  - Reading data from the environment (env variables)
  - Proving the sandboxing mechanisms for JavaScript
- - Have a webserver to execute rules
 
 ### Done
 
@@ -21,6 +20,7 @@ git clone https://github.com/tree-sitter/tree-sitter-javascript
  - Parse tree-sitter code
  - Execute JavaScript with Deno
  - Reading a YAML file
+ - Have a webserver taking JSON as input and sending back JSON
 
 
 ## Binaries

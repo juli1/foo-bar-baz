@@ -1,18 +1,18 @@
 use serde::{Deserialize, Serialize};
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, Serialize)]
 pub enum RuleType {
     TreeSitter,
     Pattern,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, Serialize)]
 pub enum Language {
     PYTHON,
     JAVASCRIPT,
 }
 
-#[derive(Deserialize, Debug)]
+#[derive(Deserialize, Debug, Serialize)]
 pub struct Rule {
     name: String,
     code: String,
@@ -37,4 +37,16 @@ pub struct Position {
 #[derive(Deserialize, Debug, Serialize)]
 pub struct Configfile {
     pub rulesets: Vec<String>,
+}
+
+#[derive(Deserialize, Debug, Serialize)]
+pub struct Request {
+    pub filename: String,
+    pub rules: Vec<Rule>,
+}
+
+#[derive(Deserialize, Debug, Serialize)]
+pub struct Response {
+    pub error: Option<String>,
+    pub violations: Vec<Violation>,
 }
