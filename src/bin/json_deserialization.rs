@@ -19,6 +19,6 @@ fn main() {
       }
     ]
     "#;
-    let rules: Vec<model::Rule> = serde_json::from_str(data).expect("we should deserialize");
+    let rules: Vec<Rule> = serde_json::from_str(data).expect("we should deserialize");
     println!("rules: {:#?}", rules);
 }

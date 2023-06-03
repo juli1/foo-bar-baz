@@ -11,15 +11,16 @@ git clone https://github.com/tree-sitter/tree-sitter-javascript
  - Make multiple execution of a function into multiple threads
  - Getting rules from an API and serializing it
  - Reading data from the environment (env variables)
- - Proving the sandboxing mechanisms for rust
+ - Proving the sandboxing mechanisms for JavaScript
  - Have a webserver to execute rules
 
 ### Done
 
-- Reading values from a JSON file and deserialize into a class
+ - Reading values from a JSON file and deserialize into a class
  - Separate the project between one or multiple common libraries and build multiple binaries
  - Parse tree-sitter code
  - Execute JavaScript with Deno
+ - Reading a YAML file
 
 
 ## Binaries

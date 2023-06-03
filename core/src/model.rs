@@ -33,3 +33,8 @@ pub struct Position {
     pub line: u32,
     pub col: u32,
 }
+
+#[derive(Deserialize, Debug, Serialize)]
+pub struct Configfile {
+    pub rulesets: Vec<String>,
+}
