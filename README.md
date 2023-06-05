@@ -9,8 +9,6 @@ git clone https://github.com/tree-sitter/tree-sitter-javascript
 ### TODO
 
  - Make multiple execution of a function into multiple threads
- - Getting rules from an API and serializing it
- - Reading data from the environment (env variables)
  - Proving the sandboxing mechanisms for JavaScript
 
 ### Done
@@ -21,6 +19,9 @@ git clone https://github.com/tree-sitter/tree-sitter-javascript
  - Execute JavaScript with Deno
  - Reading a YAML file
  - Have a webserver taking JSON as input and sending back JSON
+ - Reading data from the environment (env variables)
+ - Getting rules from an API and serializing it
+
 
 
 ## Binaries
